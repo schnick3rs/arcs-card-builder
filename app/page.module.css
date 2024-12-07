@@ -16,6 +16,111 @@
   font-family: var(--font-geist-sans);
 }
 
+.preview {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: block;
+  page-break-inside: avoid;
+  height: 88mm;
+  width: 63mm;
+  margin: 3mm 2mm 3mm 2mm;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  display: block;
+  page-break-inside: avoid;
+  height: 94mm;
+  width: 67mm;
+  -webkit-clip-path: inset(3mm 2mm 3mm 2mm);
+  clip-path: inset(3mm 2mm 3mm 2mm);
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.layerfooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footercontainer {
+  position: absolute;
+  bottom: 5mm;
+  width: 100%;
+  font-size: 3mm;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footerset {
+}
+.footertext {
+  left: 15mm;
+  width: 25mm;
+  color: white;
+  font-weight: 900;
+}
+.footerid {}
+
+.title {
+  position: absolute;
+  width: 100%;
+  font-size: 4.5mm;
+  top: 52mm;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.title-word {
+
+}
+
+.guild {
+  position: absolute;
+  width: 100%;
+  top: 58.5mm;
+  padding: 2mm 5.5mm;
+}
+
+.text p {
+  margin-bottom: 1.9mm;
+  line-height: 3.7mm;
+}
+
+.text p:last-child {
+  margin-bottom: 0;
+}
+
+.text {
+  font-size: 3.2mm;
+  text-align: left;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
