@@ -4,20 +4,10 @@ import * as React from 'react';
 import Image from "next/image";
 import styles from "./page.module.css";
 import {FormControl, Grid2, TextareaAutosize, TextField, ToggleButton, ToggleButtonGroup} from "@mui/material";
-import Markdown from 'react-markdown';
-import localFont from 'next/font/local';
+import GuildCard from "@/app/ui/guild-card";
+import VoxCard from "@/app/ui/vox-card";
+import LoreCard from "@/app/ui/lore-card";
 
-// Font files can be colocated inside of `pages`
-const arcsTitle = localFont({ src: '/fonts/copperplategothic_bold-webfont.woff2' })
-const arcsText = localFont({ src: '/fonts/NeueKabelW01Regular/NeueKabelW01Regular.woff2' })
-
-const frameGuildResource = {
-  fuel: 'Fuel',
-  material: 'Material',
-  psionic: 'Psionic',
-  relic: 'Relic',
-  weapon: 'Weapon',
-}
 
 export default function Home() {
 
@@ -25,13 +15,9 @@ export default function Home() {
   const [raidCost, setRaidCost] = React.useState('2');
   const [resourceType, setResourceType] = React.useState('Fuel');
   const [text, setText] = React.useState('' +
-      '**Manipulate (Build):** Gain 1 Material.\n\n' +
+      '> **Manipulate (Build):** Gain 1 Material.\n\n' +
       '**Prelude:** You may discard this to gain Material up to your number of empty resource slots. If the Material supply empties, steal the Material instead.'
   );
-  const P = ({ children }) => <p className={styles.text.p}>{children}</p>
-
-  const raidCostUrl = `url(/img/CardAsset-Icon-Raid-Cost-${raidCost}.png)`;
-  const resourceTypeUrl = `url(/img/CardAsset-Frame-Guild-${resourceType}.png)`;
 
   return (
     <div className={styles.page}>
@@ -40,7 +26,7 @@ export default function Home() {
         <h1>Guild Card</h1>
 
         <Grid2 container spacing={2} width={1024}>
-          <Grid2 size={6}>
+          <Grid2 size={12}>
             <div>
 
               <TextField
@@ -93,34 +79,35 @@ export default function Home() {
           </Grid2>
 
           <Grid2 size={3}>
-            <div className={styles.preview}>
-              <div className={styles.layer}
-                   style={{backgroundImage: `url(/example.png)`}}></div>
-            </div>
+            <GuildCard
+                title={title}
+                text={text}
+                resourceType={resourceType}
+                raidCost={raidCost}
+                setKey={'BC'}
+                setId={'01'}
+                image={'/img/Art Guild Example.png'}
+            />
           </Grid2>
 
           <Grid2 size={3}>
-            <div className={styles.card}>
-              <div className={styles.layer} style={{backgroundImage: `url(https://www.stuttgarter-nachrichten.de/media.facebook.f9006176-b321-4f9a-97a8-1b925d68c024.normalized.jpg)`}}></div>
-              <div className={styles.layer} style={{backgroundImage: resourceTypeUrl}}></div>
-              <div className={styles.layer} style={{backgroundImage: raidCostUrl}}></div>
-              <div className={arcsTitle.className + ' ' + styles.title}>
-                {title}
-              </div>
-              <div className={styles.guild}>
-                <div className={arcsText.className + ' ' + styles.text}>
-                  <Markdown components={{
-                    p: P
-                  }}>{text}</Markdown>
-                </div>
-              </div>
-              <div className={styles.layerfooter} style={{backgroundImage: `url(/img/CardAsset-Footer-Paper.png)`}}></div>
-              <div className={styles.footercontainer}>
-                <span className={arcsTitle.className+' '+styles.footerset}>BC</span>
-                <span className={arcsTitle.className+' '+styles.footertext}>Guild</span>
-                <span className={arcsTitle.className+' '+styles.footerid}>02</span>
-              </div>
-            </div>
+            <VoxCard
+                title={title}
+                text={text}
+                setKey={'BC'}
+                setId={'01'}
+                image={'/img/Art Vox Example.png'}
+            />
+          </Grid2>
+
+          <Grid2 size={3}>
+            <LoreCard
+                title={title}
+                text={text}
+                setKey={'BC'}
+                setId={'01'}
+                image={'/img/Art Lore Example.png'}
+            />
           </Grid2>
         </Grid2>
 

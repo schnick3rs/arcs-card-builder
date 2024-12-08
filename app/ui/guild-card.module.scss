@@ -1,0 +1,28 @@
+.card {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    display: block;
+    page-break-inside: avoid;
+    height: 94mm;
+    width: 67mm;
+    // we clip the "bleed" of the card
+    -webkit-clip-path: inset(3mm 2mm 3mm 2mm);
+    clip-path: inset(3mm 2mm 3mm 2mm);
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    font-size: 4.5mm;
+    top: 51mm;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    top: 58mm;
+    padding: 2mm 7mm;
+}
