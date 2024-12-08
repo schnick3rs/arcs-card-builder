@@ -13,11 +13,27 @@
 .alert {
     position: absolute;
     width: 100%;
-    font-size: 10mm;
+    padding: 2mm 6mm;
     top: 4mm;
     left: 0;
     text-align: center;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.caption {
+    width: 100%;
+    font-size: 4.5mm;
+    line-height: 4.5mm;
+    font-weight: bold;
+}
+
+.exclamation {
+    font-size: 10mm;
+    font-weight: bold;
 }
 
 .text {

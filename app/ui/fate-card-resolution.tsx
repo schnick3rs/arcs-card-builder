@@ -2,6 +2,7 @@ import styles from "./fate-card-resolution.module.scss";
 import * as React from "react";
 import {CardFooterText, CardLayer, CardText} from "@/app/ui/CardSnippets";
 import CardContainer from "@/app/ui/card-container";
+import {textFont} from "@/app/ui/fonts";
 
 type Props = {
     fate: String,
@@ -24,8 +25,14 @@ export default function FateCardResolution({ fate, act, text, setKey, setId }: P
 
             <CardLayer image={`/img/CardAsset-Texture-Space.png`} />
             <CardLayer image={'/img/CardAsset-Frame-Resolution.png'} />
-
-            <div className={styles.alert}><CardText text={"Wait to resolve this until the intermission"}/></div>
+S
+            <div className={`${textFont.className} ${styles.alert}`}>
+                <div className={styles.exclamation}>!</div>
+                <div className={styles.caption}>
+                    Wait to resolve this until the intermission
+                </div>
+                <div className={styles.exclamation}>!</div>
+            </div>
 
             <div className={styles.text}><CardText text={text}/></div>
 
