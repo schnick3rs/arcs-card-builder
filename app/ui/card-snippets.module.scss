@@ -29,9 +29,27 @@
     line-height: 3.7mm;
 }
 
+
+.text > ol {
+    font-family: unset;
+    margin-bottom: 1.9mm;
+    font-size: 3.2mm;
+    text-align: left;
+    line-height: 3.7mm;
+    list-style-position: inside;
+    list-style: decimal;
+    padding-left: 3mm;
+}
+
+.text > ol li {
+    margin-bottom: 1.9mm;
+}
+
 .text >:last-child {
     margin-bottom: 0;
 }
+
+
 
 .text > blockquote {
     border: 0.3mm solid #C09664;

@@ -16,10 +16,6 @@ export default function LoreCard({ title, image, text, setKey, setId }: Props) {
 
     const type = 'Lore';
 
-    const imageUrl = `url("${image}")`;
-
-    const P = ({ children }) => <p className={styles.text.p}>{children}</p>
-
     return (
         <CardContainer>
             <CardLayer image={image} />

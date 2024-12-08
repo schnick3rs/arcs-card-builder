@@ -7,6 +7,8 @@ import {FormControl, Grid2, TextareaAutosize, TextField, ToggleButton, ToggleBut
 import GuildCard from "@/app/ui/guild-card";
 import VoxCard from "@/app/ui/vox-card";
 import LoreCard from "@/app/ui/lore-card";
+import FateCardSetup from "@/app/ui/fate-card-setup";
+import FateCardResolution from "@/app/ui/fate-card-resolution";
 
 
 export default function Home() {
@@ -107,6 +109,26 @@ export default function Home() {
                 setKey={'BC'}
                 setId={'01'}
                 image={'/img/Art Lore Example.png'}
+            />
+          </Grid2>
+
+          <Grid2 size={3}>
+            <FateCardSetup
+                fate={'Steward'}
+                act={1}
+                text={`1. Gain Imperial Authority (02) and Dealmakers (03).\n2. Gain the First Regent tile.\n\n_Flip this card over._`}
+                setKey={'BC'}
+                setId={'01'}
+            />
+          </Grid2>
+
+          <Grid2 size={3}>
+            <FateCardResolution
+                fate={'Steward'}
+                act={1}
+                text={`1. Gain Imperial Authority (02) and Dealmakers (03).\n2. Gain the First Regent tile.\n\n_Flip this card over._`}
+                setKey={'BC'}
+                setId={'01'}
             />
           </Grid2>
         </Grid2>
