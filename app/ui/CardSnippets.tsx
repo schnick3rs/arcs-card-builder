@@ -1,17 +1,19 @@
 import styles from "@/app/ui/card-snippets.module.scss";
 import * as React from "react";
 
-import {textFont, titleFont} from '@/app/ui/fonts';
+import {textFont, textFontBold, titleFont} from '@/app/ui/fonts';
 import Markdown from "react-markdown";
 
 export function CardText({ text }) {
 
     const BQ = ({ children }) => <blockquote className={styles.text.blockquote}>{children}</blockquote>
+    const STRONG = ({ children }) => <span className={textFontBold.className}>{children}</span>
 
     return (
         <div className={textFont.className + ' ' + styles.text}>
             <Markdown components={{
-                blockquote: BQ
+                blockquote: BQ,
+                strong: STRONG,
             }}>{text}</Markdown>
         </div>
     )
