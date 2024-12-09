@@ -9,6 +9,8 @@ import VoxCard from "@/app/ui/vox-card";
 import LoreCard from "@/app/ui/lore-card";
 import FateCardSetup from "@/app/ui/fate-card-setup";
 import FateCardResolution from "@/app/ui/fate-card-resolution";
+import {CardLayer} from "@/app/ui/CardSnippets";
+import CardContainer from "@/app/ui/card-container";
 
 
 export default function Home() {
@@ -126,10 +128,14 @@ export default function Home() {
             <FateCardResolution
                 fate={'Steward'}
                 act={1}
-                text={`1. Gain Imperial Authority (02) and Dealmakers (03).\n2. Gain the First Regent tile.\n\n_Flip this card over._`}
+                text={`**If you completed your objective:**\n\n1. Add Council Intrigue (05), Tax Collectors (06), and Hunter Squads (07) to the Court deck.\n\n2. Add Imperial Protectors (08) to the rules booklet. Explain it to everyone.\n\n3. Scrap Empire Falls (09) and 2 Lesser Regents (10–11).\n\n**If you failed your objective:**\n\n1. Scrap Council Intrigue (05), Tax Collectors (06), Hunter Squads (07), and Imperial Protectors (08).\n\n2. Add Empire Falls (09) and 2 Lesser Regents (10–11) to the Court deck.\n\n3. Add Dealmakers (03) to the Court deck.`}
                 setKey={'BC'}
                 setId={'01'}
             />
+          </Grid2>
+
+          <Grid2 size={3}>
+            <CardContainer><CardLayer image={'https://ledercardcdn.seiyria.com/cards/arcs/en-US/F104.webp'}></CardLayer></CardContainer>
           </Grid2>
         </Grid2>
 

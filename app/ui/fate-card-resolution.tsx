@@ -29,7 +29,7 @@ S
             <div className={`${textFont.className} ${styles.alert}`}>
                 <div className={styles.exclamation}>!</div>
                 <div className={styles.caption}>
-                    Wait to resolve this until the intermission
+                    Wait to resolve this until the Intermission
                 </div>
                 <div className={styles.exclamation}>!</div>
             </div>
