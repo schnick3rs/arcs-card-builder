@@ -11,6 +11,8 @@ import FateCardSetup from "@/app/ui/fate-card-setup";
 import FateCardResolution from "@/app/ui/fate-card-resolution";
 import {CardLayer} from "@/app/ui/CardSnippets";
 import CardContainer from "@/app/ui/card-container";
+import FateCardEdict from "@/app/ui/fate-card-edict";
+import FateCardLaw from "@/app/ui/fate-card-law";
 
 
 export default function Home() {
@@ -136,6 +138,29 @@ export default function Home() {
 
           <Grid2 size={3}>
             <CardContainer><CardLayer image={'https://ledercardcdn.seiyria.com/cards/arcs/en-US/F104.webp'}></CardLayer></CardContainer>
+          </Grid2>
+
+          <Grid2 size={3}>
+            <FateCardEdict
+                fate={'Steward'}
+                act={1}
+                position={2}
+                title={`Imperial Quorum`}
+                text={`Resolve the effects of Edict 03—Govern the Imperial Reach, or Govern with Authority in Act III—as follows, then skip Edict 03 itself.\n\n**First, Collect Demand:** The First Regent collects the Demand.\n\n**Second, Take Action:** The Regent with the most starports built _**may**_ take the Imperial Action. On a tie, skip this. Third,\n\n**Change Policy:** The Regent with the most cities built _**may**_ change the Policy of Edict 03. On a tie, skip this.\n\n_The conditions "most starports built" and "most cities built" do include cities and starports on Flagship boards._`}
+                setKey={'BC'}
+                setId={'01'}
+            />
+          </Grid2>
+
+          <Grid2 size={3}>
+            <FateCardLaw
+                fate={'Steward'}
+                act={1}
+                title={`Imperial Quorum`}
+                text={`Resolve the effects of Edict 03—Govern the Imperial Reach, or Govern with Authority in Act III—as follows, then skip Edict 03 itself.\n\n**First, Collect Demand:** The First Regent collects the Demand.\n\n**Second, Take Action:** The Regent with the most starports built _**may**_ take the Imperial Action. On a tie, skip this. Third,\n\n**Change Policy:** The Regent with the most cities built _**may**_ change the Policy of Edict 03. On a tie, skip this.\n\n_The conditions "most starports built" and "most cities built" do include cities and starports on Flagship boards._`}
+                setKey={'BC'}
+                setId={'01'}
+            />
           </Grid2>
         </Grid2>
 
